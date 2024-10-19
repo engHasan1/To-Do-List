@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-family: "Lato", serif;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(120deg, #3ec0b4, #d748f9);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-section {
+    position: relative;
+    top: 0;
+    overflow: auto;
+    width: 90%;
+    max-width: 1400px;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 10%;
+    display: flex;
+}
+
+.SideMenu {
+    position: sticky;
+    width: 250px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    color: #333;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    transition: width 0.3s ease;
+}
+
+.SideMenu .username {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.SideMenu .username i {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SideMenu .username h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.SideMenu h3 {
+    text-align: center;
+    font-size: 18px;
+    width: 90%;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.SideMenu .sidemenu-link {
+    padding-top: 20px;
+}
+
+.SideMenu .sidemenu-link li {
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.SideMenu .sidemenu-link a {
+    color: #333;
+    font: 24px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.SideMenu .sidemenu-link i {
+    padding: 0 10px;
+}
+
+.SideMenu .sidemenu-link li:hover {
+    background-color: #d548f9c5;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 10px;
+}
+
+.SideMenu .sidemenu-link li:hover a {
+    color: #fff;
+}
+
+.SideMenu .sidemenu-link li:hover i {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.SideMenu.collapsed {
+    width: 60px;
+}
+
+.back {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.SideMenu.collapsed .back i {
+    transform: rotate(180deg);
+}
+
+.SideMenu.collapsed .username h1,
+.SideMenu.collapsed h3,
+.SideMenu.collapsed .sidemenu-link span {
+    display: none;
+}
+
+.SideMenu.collapsed .sidemenu-link i {
+    font-size: 24px;
+}
+
+.SideMenu.collapsed .sidemenu-link li {
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    padding: 10px;
+}
+
+.content p {
+    color: #333;
+    padding: 5px;
+}
+
+.content .serch-section {
+    padding: 16px 0;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+}
+
+.content .serch-section input {
+    height: 40px;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    width: 100%;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+.content .serch-section i {
+    position: absolute;
+    top: 28px;
+    transform: translateX(12px);
+    font-size: 16px;
+    color: #333;
+}
+
+.creat-button {
+    padding-top: 2px;
+}
+
+.creat-button button {
+    border: none;
+    height: 40px;
+    padding: 10px;
+    width: 30%;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.creat-button button:hover {
+    background-color: #d748f9;
+    color: #fff;
+}
+
+.tasks {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.task-card {
+    display: flex;
+    height: 256px;
+}
+
+.task-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10px;
+    width: 90%;
+    border: 1px solid #a4a2a2;
+    border-radius: 8px;
+    padding: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.task-content:hover {
+    filter: drop-shadow(1px 1px 20px #a4a2a268);
+}
+
+.task-content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.task-content .task-text {
+    padding-top: 20px;
+    color: #6d6c6c;
+}
+
+.task-content hr {
+    width: 30%;
+}
+
+.task-status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.task-status.in-progress {
+    background-color: #ffd700;
+    color: #333;
+}
+
+.task-status.completed {
+    background-color: #4caf50;
+    color: white;
+}
+
+.task-status.on-hold {
+    background-color: #ff9800;
+    color: white;
+}
+
+.task-status:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.task-buttons button {
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.task-buttons button:hover {
+    transform: scale(1.09);
+}
+
+.task-buttons .square {
+    background-color: blue;
+    color: #fff;
+}
+
+.task-buttons .square:hover {
+    background-color: #fff;
+    color: blue;
+    filter: drop-shadow(1px 1px 20px #a4a2a268);
+}
+
+.task-buttons .check {
+    background-color: #3ec0b4;
+    color: #fff;
+}
+
+.task-buttons .check:hover {
+    background-color: #fff;
+    color: #3ec0b4;
+    filter: drop-shadow(1px 1px 20px #a4a2a268);
+}
+
+.task-buttons .trash {
+    background-color: #d748f9;
+    color: #fff;
+}
+
+.task-buttons .trash:hover {
+    background-color: #fff;
+    color: #d748f9;
+    filter: drop-shadow(1px 1px 20px #a4a2a268);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-content textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+#saveTask {
+    background-color: #3ec0b4;
+    color: white;
+}
+
+#closeModal {
+    background-color: #d748f9;
+    color: white;
+}
+
+.modal-content button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}

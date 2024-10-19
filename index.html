@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="glass-section">
+        <div class="SideMenu">
+            <div class="username">
+                <i class="fa-solid fa-user"></i>
+                <h1>USER</h1>
+            </div>
+            <h3>Filter By Status</h3>
+            <p class="borderbottum"></p>
+            <div class="sidemenu-link">
+                <ul>
+                    <li><a href="#" data-status="all"><i class="fa-solid fa-list"></i><span>All</span></a></li>
+                    <li><a href="#" data-status="in-progress"><i class="fa-solid fa-spinner"></i><span>In
+                                Progras</span></a></li>
+                    <li><a href="#" data-status="completed"><i class="fa-solid fa-check"></i><span>Completed</span></a>
+                    </li>
+                    <li><a href="#" data-status="on-hold"><i class="fa-solid fa-pause"></i><span>On Hold</span></a></li>
+                </ul>
+            </div>
+            <div class="back">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <div class="content">
+            <p>Hello, user</p>
+            <div class="serch-section">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search your task">
+            </div>
+            <form action="" class="creat-button">
+                <button><i class="fa-solid fa-plus"></i> Creat new task</button>
+            </form>
+            <div class="tasks">
+                <div class="task-card">
+                    <div class="task-content">
+                        <h3>task title</h3>
+                        <hr>
+                        <p class="task-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error amet quis
+                            soluta minima
+                            possimus eligendi, odit, quaerat magni voluptatibus voluptate cum provident fugit enim
+                            beatae.</p>
+                        <p class="task-status in-progress">in-progress</p>
+                    </div>
+                    <div class="task-buttons">
+                        <button class="square"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="check"><i class="fa-solid fa-check"></i></button>
+                        <button class="trash"><i class="fa-solid fa-trash"></i></button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
