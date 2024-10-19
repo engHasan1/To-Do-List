@@ -10,7 +10,6 @@ This is a dynamic and interactive To-Do List web application built with HTML, CS
 - Delete tasks
 - Filter tasks by status (All, In Progress, Completed, On Hold)
 - Search tasks by title or description
-- Responsive design for various screen sizes
 - Local storage integration for data persistence
 - Customizable username
 
